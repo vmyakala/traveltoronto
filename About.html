@@ -1,0 +1,260 @@
+<html>
+
+<head> 	
+
+
+
+ <meta charset="UTF-8">
+   	<title>	ABOUT US </title>
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!--Main css-->
+    <link href='css/main.css' rel='stylesheet' type='text/css'>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!--Registration js-->
+    <script src="js/registration.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+	</head>
+	
+	<style>
+			hr
+			{	color: black;
+				background-color: black;
+				height: 2px;
+			}
+
+			hr-text
+			{
+				color: black;
+				text-align: center;
+			}
+			
+			.aboutContainer {
+				width : 70%;
+				height: 1050px;
+				border: 1px;
+				
+				margin: 15px auto;
+				position: relative;	
+			}
+			
+			.ourInfo {
+				width : 70%;
+				height: 500px;
+				border: 1px ;
+				
+				margin: 25px auto;
+				position: relative;	
+			}
+			
+			
+			.item {
+	margin: 0px 0px 10px 0px;
+	overflow: auto;
+	line-height: 1.4em;
+}
+
+
+
+
+
+	</style	>
+
+
+<body onload="checkAuthorization()">
+
+
+<div class="container-fluid div-logo">
+    <div class="row">
+        <div class="col-lg-1">
+            <img src="images/logo-example.png" alt="example" class="rounded-circle">
+        </div>
+        <div class="col-lg-11">
+            <h1>Tourism TORONTO</h1>
+            <p>Your personal guide to Toronto</p>
+        </div>
+    </div>
+</div>
+<nav class="site-header navbar-dark bg-dark sticky-top py-1">
+    <div class="container d-flex flex-column flex-lg-row justify-content-between ">
+        <a class="py-2 d-none d-sm-inline-block" href="home.html">Home</a>
+        <a class="py-2 d-none d-sm-inline-block" href="attractions.html">Attractions</a>
+        <a class="py-2 d-none d-sm-inline-block" href="About.html">About us</a>
+        <a class="py-2 d-none d-sm-inline-block" href="contact.html">Contact</a>
+        <a class="py-2 d-none d-sm-inline-block" id="logOut" href="home.html" onclick="logout()">Log out</a>
+        <div class="dropdown" id="signInDrop">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sign-in
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <form class="px-4 py-3" name="myFormLog" role="form" method="POST" action="home.html" onsubmit="authorization()" novalidate>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        <i id="email-message" hidden> No user with this email</i>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        <i id="password-message" hidden> Incorrect password</i>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="registration.html">New around here? Sign up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<section > 
+
+<div class = "aboutContainer" style = "text-align : center" >
+
+<br>
+
+<h1><strong> <b>About Tourism Toronto</b></strong></h1>
+
+<h2> The Toronto Convention & Visitors Association </h2>
+<br>
+<p style="font-family : verdana">
+
+"Tourism Toronto (a.k.a. " 
+<strong> Toronto Convention and Visitors Association, or TCVA </strong>
+") Toronto’s new online travel company was founded in the year 2018 by <strong> Alex , Bharath, Oleg, Vamsi , Vinay </strong>. Created to empower the Canada traveller with instant information and comprehensive choices, the company began its journey in the Canada travel market. It aimed to offer a range of best-value services along with cutting-edge technology and dedicated round-the-clock customer support.
+</p>
+
+<p style="font-family : verdana">
+
+After consolidating its position in the market as a brand recognised for its reliability and transparency, <b>Toronto Tourism </b>  followed its success in the Canada by launching its Canada operations in 2018.
+
+Toronto Tourism offers travellers the convenience of online travel information at finger tips. Rapidly, Toronto Tourism became the preferred choice of millions of travellers who were delighted to be empowered by a few mouse clicks!
+
+</p>
+
+<p style="font-family : verdana">
+
+"We provide a wealth of services – this website is just one example – so that travellers can plan a great Toronto experience tailored to their needs. Our association also works closely with meeting planners and tour operators to ensure that the city exceeds their hosts, delegates and clients expectations."
+
+</p>
+
+
+<div class= "ourInfo">
+
+<h2> Accessibility </h2>
+
+<p>  "We fully support the standard set by the Accessibility for Ontarians with Disabilities Act (AODA).  For feedback on our Customer Service please contact: " </p>
+
+
+
+<address>
+
+<h1>Tourism Project Team - F </h1>
+<br>
+<strong> Email : </strong>
+<a href="mailto:vamsikrishnabongu@gmail.com" target="_blank" title="Opens in new tab" class="bordered-link"> contactTourismToronto@gmail.com</a>
+<br>
+<strong> Phone : </strong>
+"+1 647 209 3073 "
+<br>
+<strong> Fax: </strong>
+"+1 647 209 3073 "
+
+<br>
+<strong> Mail : </strong>
+" 265, Yorkland Blvd. "
+<br>
+" Lambton College "
+<br>
+"
+Toronto, ON  M5J 1A7 "
+
+</p>
+</address>
+
+<hr align="center" width="40%">
+
+<h2 class="sidebar_title"> Share </h2>
+
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.seetorontonow.com/about-tourism-toronto/" target="_blank" title="Opens in new tab">
+
+<svg class="facebookShare" xmln:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox= " 0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+
+<title> Share this on Facebook </title>
+<path d="M21 0H3C1.4 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h9.1v-8.6H9.2v-3.7h2.9V9.8c0-2.9 2.1-5.2 4.9-5.2h2.6v4.2h-2.4 c-0.6 0-0.8 0.4-0.8 0.9v2h3.2v3.7h-3.2V24H21c1.6 0 3-1.3 3-3V3C24 1.3 22.6 0 21 0z"> </path>
+</svg>
+
+</a>
+
+<a href="https://twitter.com/share?text=About Tourism Toronto:&url=https://www.seetorontonow.com/about-tourism-toronto/" target="_blank" title="Opens in new tab">
+
+<svg class="twitterShare" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve"><title>Share This on Twitter</title><path d="M20 0H4C1.8 0 0 1.8 0 4v16c0 2.2 1.8 4 4 4h16c2.2 0 4-1.8 4-4V4C24 1.8 22.2 0 20 0zM19.6 8c0 0.2 0 0.3 0 0.5 0 5.3-4 11.4-11.2 11.4 -2.2 0-4.3-0.7-6-1.8 0.3 0 0.6 0 0.9 0 1.8 0 3.5-0.6 4.9-1.7 -1.7 0-3.2-1.2-3.7-2.8 0.2 0 0.5 0.1 0.7 0.1 0.4 0 0.7 0 1-0.1 -1.8-0.4-3.2-2-3.2-3.9 0 0 0 0 0 0C3.7 10 4.3 10.1 5 10.2c-1.1-0.7-1.8-2-1.8-3.4 0-0.7 0.2-1.4 0.6-2 1.9 2.4 4.8 4 8.1 4.2 -0.1-0.3-0.1-0.6-0.1-0.9 0-2.2 1.8-4 3.9-4 1.1 0 2.2 0.5 2.9 1.3 0.9-0.2 1.7-0.5 2.5-1 -0.3 0.9-0.9 1.7-1.7 2.2 0.8-0.1 1.6-0.3 2.3-0.6C21.1 6.7 20.4 7.4 19.6 8z"></path></svg>
+
+</a>
+
+</div>
+
+<h2 class="sidebar__title">Your Toronto</h2>
+
+<ul >
+      <li style = "display:inline;" ><a href="https://www.facebook.com/visittoronto/" target="_blank" title="Opens in new tab"><span>Facebook: Visit Toronto |</span></a></li>
+      <li style = "display:inline;" ><a href="https://twitter.com/SeeTorontoNow" target="_blank" title="Opens in new tab"><span>Twitter: @SeeTorontoNow | </span></a></li>
+      <li style = "display:inline;" ><a href="https://www.instagram.com/seetorontonow/" target="_blank" title="Opens in new tab"><span>Instagram: #SeeTorontoNow | </span></a></li>
+      <li style = "display:inline;" ><a href="https://www.seetorontonow.com/newsletter-signup/"><span>Subscribe to our E-Newsletter </span></a></li>
+    </ul>
+	
+	
+	
+</div>
+
+</section>
+
+<br>
+<br>
+
+
+
+
+
+
+
+
+<footer class="bg-dark">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="mt-3 text-left text-white">© Lambton College 2018 | Web technology project </p>
+            </div>
+            <div class="col-lg-6">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Bootstrap js-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+
+
+
+</html>

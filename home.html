@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!--Main css-->
+    <link href='css/main.css' rel='stylesheet' type='text/css'>
+    <!--Registration js-->
+    <script src="js/registration.js"></script>
+
+</head>
+<body onload="checkAuthorization()">
+<div class="container-fluid div-logo">
+    <div class="row">
+        <div class="col-lg-1">
+            <img src="images/logo-example.png" alt="example" class="rounded-circle">
+        </div>
+        <div class="col-lg-11">
+            <h1>Tourism TORONTO</h1>
+            <p>Your personal guide to Toronto</p>
+        </div>
+    </div>
+</div>
+<nav class="site-header navbar-dark bg-dark sticky-top py-1">
+    <div class="container d-flex flex-column flex-lg-row justify-content-between ">
+        <a class="py-2 d-none d-sm-inline-block" href="home.html">Home</a>
+        <a class="py-2 d-none d-sm-inline-block" href="attractions.html">Attractions</a>
+        <a class="py-2 d-none d-sm-inline-block" href="About.html">About us</a>
+        <a class="py-2 d-none d-sm-inline-block" href="contact.html">Contact</a>
+        <a class="py-2 d-none d-sm-inline-block" id="logOut" href="home.html" onclick="logout()">Log out</a>
+        <div class="dropdown" id="signInDrop">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sign-in
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <form class="px-4 py-3" name="myFormLog" role="form" method="POST" action="home.html" onsubmit="authorization()" novalidate>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        <i id="email-message" hidden> No user with this email</i>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        <i id="password-message" hidden> Incorrect password</i>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="registration.html">New around here? Sign up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main role="main" class="container-fluid">
+    <div class="row">
+        <div class="col-xl starter-template">
+            <div class="col-lg-12 shadow p-3 mb-5 bg-white rounded">
+                <div class="list-group">
+                    <a href="attractions/cn-tower.html" class="list-group-item list-group-item-action">
+                        CN Tower
+                    </a>
+                    <a href="attractions/st_lawrence-market.html" class="list-group-item list-group-item-action">St. Lawrence Market</a>
+                    <a href="attractions/distillery-district.html" class="list-group-item list-group-item-action">Distillery District</a>
+                    <a href="attractions/toronto_islands.html" class="list-group-item list-group-item-action">Toronto Islands</a>
+                    <a href="attractions/aquarium-canada.html" class="list-group-item list-group-item-action">Ripley's Aquarium of Canada</a>
+                    <a href="attractions/casa-loma.html" class="list-group-item list-group-item-action">Casa Loma</a>
+                    <a href="attractions/royal-ontario-musem.html" class="list-group-item list-group-item-action">Royal Ontario Museum</a>
+                    <a href="attractions/high-park.html" class="list-group-item list-group-item-action">High Park</a>
+                    <a href="attractions/eaton-centre.html" class="list-group-item list-group-item-action">Toronto Eaton Centre</a>
+                    <a href="attractions/hockey-hall-of-fame.html" class="list-group-item list-group-item-action">Hockey Hall of Fame</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 starter-template ">
+            <div class="col-lg-12 shadow p-3 mb-5 bg-white rounded">
+                <figure  id = "slider">
+
+                    <a href="attractions/cn-tower.html"><img class = "image" src="images/1.jpg"></a>
+                    <a href="attractions/st_lawrence-market.html"><img class = "image" src="images/2.jpg"></a>
+                    <a href="attractions/distillery-district.html"><img class = "image" src="images/3.jpg"></a>
+                    <a href="attractions/toronto_islands.html"><img class = "image" src="images/4.jpg"></a>
+                    <a href="attractions/aquarium-canada.html"><img class = "image" src="images/5.jpg"></a>
+                    <a href="attractions/casa-loma.html"><img class = "image" src="images/6.jpg"></a>
+                    <a href="attractions/royal-ontario-musem.html"><img class = "image" src="images/7.jpg"></a>
+                    <a href="attractions/high-park.html"><img class = "image" src="images/8.jpg"></a>
+                    <a href="attractions/eaton-centre.html"><img class = "image" src="images/9.jpg"></a>
+                    <a href="attractions/hockey-hall-of-fame.html"><img class = "image" src="images/10.jpg"></a>
+                    <button class = "btn" onclick = "plusIndex(-1)" id = "btn1">&#10094;</button>
+                    <button class = "btn" onclick = "plusIndex(1)" id = "btn2">&#10095;</button>
+
+                </figure>
+            </div>
+        </div>
+        <div class="col-xl-2 starter-template" id="notMember">
+                <div class="card">
+                    <h5 class="card-header">Not a member?</h5>
+                    <div class="card-body">
+                        <a href="registration.html" class="btn btn-primary">Sign up</a>
+                        <p class="card-text">here!</p>
+                    </div>
+                </div>
+        </div>
+</main>
+<footer class="bg-dark">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="mt-3 text-left text-white">© Lambton College 2018 | Web technology project </p>
+            </div>
+            <div class="col-lg-6">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Bootstrap js-->
+<script type="text/javascript" src="js/MyHome.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</body>
+</html>

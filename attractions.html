@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!--Main css-->
+    <link href='css/main.css' rel='stylesheet' type='text/css'>
+    <!--Registration js-->
+    <script src="js/registration.js"></script>
+
+</head>
+<body onload="checkAuthorization()">
+<div class="container-fluid div-logo">
+    <div class="row">
+        <div class="col-lg-1">
+            <img src="images/logo-example.png" alt="example" class="rounded-circle">
+        </div>
+        <div class="col-lg-11">
+            <h1>Tourism TORONTO</h1>
+            <p>Your personal guide to Toronto</p>
+        </div>
+    </div>
+</div>
+<nav class="site-header navbar-dark bg-dark sticky-top py-1">
+    <div class="container d-flex flex-column flex-lg-row justify-content-between ">
+        <a class="py-2 d-none d-sm-inline-block" href="home.html">Home</a>
+        <a class="py-2 d-none d-sm-inline-block" href="attractions.html">Attractions</a>
+        <a class="py-2 d-none d-sm-inline-block" href="About.html">About us</a>
+        <a class="py-2 d-none d-sm-inline-block" href="contact.html">Contact</a>
+        <a class="py-2 d-none d-sm-inline-block" id="logOut" href="home.html" onclick="logout()">Log out</a>
+        <div class="dropdown" id="signInDrop">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sign-in
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <form class="px-4 py-3" name="myFormLog" role="form" method="POST" action="attractions.html" onsubmit="authorization()" novalidate>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        <i id="email-message" hidden> No user with this email</i>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        <i id="password-message" hidden> Incorrect password</i>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="registration.html">New around here? Sign up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div role="main" class="container-fluid">
+    <div class="row">
+        <div class="col-xl starter-template">
+            <div class="col-lg-12  sticky-list-place">
+                <div class="list-group shadow p-3 mb-5 bg-white rounded">
+                    <a href="#1" class="list-group-item list-group-item-action active">CN Tower</a>
+                    <a href="#2" class="list-group-item list-group-item-action">St. Lawrence Market</a>
+                    <a href="#3" class="list-group-item list-group-item-action">Distillery District</a>
+                    <a href="#4" class="list-group-item list-group-item-action">Toronto Islands</a>
+                    <a href="#5" class="list-group-item list-group-item-action">Ripley's Aquarium of Canada</a>
+                    <a href="#6" class="list-group-item list-group-item-action">Casa Loma</a>
+                    <a href="#7" class="list-group-item list-group-item-action">Royal Ontario Museum</a>
+                    <a href="#8" class="list-group-item list-group-item-action">High Park</a>
+                    <a href="#9" class="list-group-item list-group-item-action">Toronto Eaton Centre</a>
+                    <a href="#10" class="list-group-item list-group-item-action">Hockey Hall of Fame</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 starter-template ">
+            <div class="row">
+
+                <div class="col-md-4" id="1">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/1.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">The CN Tower is a National icon, engineering Wonder, a Toronto must-see attraction and award winning dining and entertainment destination.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/cn-tower.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="2">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/2.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">Once housing city hall, this Victorian building is surrounded by other historically significant architectural gems.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/st_lawrence-market.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="3">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/3.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">The Distillery District neighbourhood is a national historic site and walking District. A favourite destination in the city for locals and tourists famous for it unique ...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/distillery-district.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="4">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/4.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">Park consisting of four main islands and containing trails, beaches and children's amusement rides.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/toronto_islands.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="5">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/5.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">Explore the Waters of the World at Ripley's Aquarium of Canada. Located in the heart of downtown Toronto at the base of the CN Tower, the aquarium is Toronto's newest must-see attraction for tourists and locals of all ages.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/aquarium-canada.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="6">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/6.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">Canada's majestic castle and Toronto’s premier historic attraction. In 1911, Sir Henry Pellatt engaged noted architect E.J. Lennox to help him realize a lifelong dream,the creation of an Edwardian castle on the top of a hill overlooking Toronto. </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/casa-loma.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="7">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/7.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">Opened in 1914, the Royal Ontario Museum (ROM) showcases art, culture, and nature from around the globe and across the ages. </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/royal-ontario-musem.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="8">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/8.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">Popular urban oasis offers a variety of outdoor recreation including ice-skating, baseball games, nature hikes and exploring the park's greenhouse.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/high-park.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="9">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/9.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">Enjoy a premier shopping mall experience at CF Toronto Eaton Centre. Mall offerings include hundreds of brand name stores, restaurants, and entertainment.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/eaton-centre.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="10">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top" src="images/10.jpg" data-holder-rendered="true">
+
+                        <div class="card-body">
+                            <p class="card-text">Official Hockey Hall of Fame website. Home to hockey's greatest players. Unrivalled collection of photos, statistics, profiles, global coverage, trivia, games and ...</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="attractions/hockey-hall-of-fame.html"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
+<footer class="bg-dark">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="mt-3 text-left text-white">© Lambton College 2018 | Web technology project </p>
+            </div>
+            <div class="col-lg-6">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Bootstrap js-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".list-group").on("click","a", function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $(".list-group a").removeClass('active');
+                $(this).toggleClass('active');
+                $('body,html').animate({scrollTop: top-50}, 1000);
+
+            });
+        });
+        $('p.card-text').each(function() {
+            if ($(this).text().length > 100) {
+                $(this).text( $(this).text().substring(0, 90) + '…');
+            }
+        });
+    </script>
+</body>
+</html>
