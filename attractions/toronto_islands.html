@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!--Main css-->
+    <link href='../css/main.css' rel='stylesheet' type='text/css'>
+    <!--Jquery js-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--Registration js-->
+    <script src="../js/registration.js"></script>
+    <!--Comments js-->
+    <script src="../js/comments.js"></script>
+
+
+</head>
+<body onload="checkAuthorization()">
+<div class="container-fluid div-logo">
+    <div class="row">
+        <div class="col-lg-1">
+            <img src="../images/logo-example.png" alt="example" class="rounded-circle">
+        </div>
+        <div class="col-lg-11">
+            <h1>Tourism TORONTO</h1>
+            <p>Your personal guide to Toronto</p>
+        </div>
+    </div>
+</div>
+<nav class="site-header navbar-dark bg-dark sticky-top py-1">
+    <div class="container d-flex flex-column flex-lg-row justify-content-between ">
+        <a class="py-2 d-none d-sm-inline-block" href="../home.html">Home</a>
+        <a class="py-2 d-none d-sm-inline-block" href="../attractions.html">Attractions</a>
+        <a class="py-2 d-none d-sm-inline-block" href="../About.html">About us</a>
+        <a class="py-2 d-none d-sm-inline-block" href="../contact.html">Contact</a>
+        <a class="py-2 d-none d-sm-inline-block" id="logOut" href="../home.html" onclick="logout()">Log out</a>
+        <div class="dropdown" id="signInDrop">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sign-in
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <form class="px-4 py-3" name="myFormLog" role="form" method="POST" action="home.html" onsubmit="authorization()" novalidate>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        <i id="email-message" hidden> No user with this email</i>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleDropdownFormPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        <i id="password-message" hidden> Incorrect password</i>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../registration.html">New around here? Sign up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main role="main" class="container-fluid">
+    <div class="row">
+        <div class="col-xl-2 starter-template">
+            <div class="col-lg-12 shadow p-3 mb-5 bg-white rounded">
+                <div class="list-group">
+                    <a href="cn-tower.html" class="list-group-item list-group-item-action">
+                        CN Tower
+                    </a>
+                    <a href="st_lawrence-market.html" class="list-group-item list-group-item-action">St. Lawrence Market</a>
+                    <a href="distillery-district.html" class="list-group-item list-group-item-action">Distillery District</a>
+                    <a href="toronto_islands.html" class="list-group-item list-group-item-action">Toronto Islands</a>
+                    <a href="aquarium-canada.html" class="list-group-item list-group-item-action">Ripley's Aquarium of Canada</a>
+                    <a href="casa-loma.html" class="list-group-item list-group-item-action">Casa Loma</a>
+                    <a href="royal-ontario-musem.html" class="list-group-item list-group-item-action">Royal Ontario Museum</a>
+                    <a href="high-park.html" class="list-group-item list-group-item-action">High Park</a>
+                    <a href="eaton-centre.html" class="list-group-item list-group-item-action">Toronto Eaton Centre</a>
+                    <a href="hockey-hall-of-fame.html" class="list-group-item list-group-item-action">Hockey Hall of Fame</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 starter-template ">
+                <div class="col-lg-12 shadow-none mb-2 bg-white rounded">
+					<h1> Toronto Islands </h1>
+					<img src="../images/ti0.jpg" class="img-fluid shadow-lg rounded">
+                </div>
+				<div class="col-lg-12 mb-2 p-5 bg-white rounded aling-p">
+				<dd class="col-sm ">           
+The Toronto Islands - also called the Island, or Toronto Island Park - is located in Lake Ontario, a 13-minute 
+ferry ride from downtown Toronto. Boats to the Island leave from the Jack Layton Ferry Terminal at the foot of Bay St. 
+and Queen’s Quay. The Island is actually a group of 15 islands inter-connected by pathways and bridges. You can walk 
+from one end of the Island to the other.
+<p>	          The island is approximately 5 kms long from Ward's Island to Hanlan's Point.</p>
+
+	<p>On this website you can find information about topics of general interest such as maps and directions, island ferry 
+	schedule, activities for kids, tours, beaches, bicycle rental and more.</p>
+<p>Kids and adults of all ages can find something to do or see on the Island. 
+There are beautiful swimming beaches (including a Clothing Optional Beach on Hanlan’s Point!), sports facilities, 
+bike, canoe and kayak rentals, a boating marina, large grassy fields for picnics, a theatre, nature paths, EMS and 
+fire station, an amusement park and a charming 150 year-old community of 600 people living year-round in cottage-like 
+homes.</p>
+
+You can walk, run or take your bike on the island, walk your dog (on a leash), visit the 200 year old lighthouse or the 
+trout pond or have a coffee or beer at one of the restaurants. There are lockers at several busy locations, a pier, 
+boardwalk, formal gardens, playgrounds, artists retreat and even a public grade school.  </dd></div>
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Introductory Video
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/NgFbSTXGlE4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>		</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Island Map
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <img src="../images/ti1.jpg" class="img-fluid shadow-lg rounded">
+      </div>
+    </div>
+  </div>
+   <div class="card">
+    <div class="card-header" id="headingFour">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
+          Location
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23105.6547604262!2d-79.39469594487262!3d43.62305363022449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cab7615e8755%3A0x17c993e3cfa0a160!2sToronto+Islands!5e0!3m2!1sen!2sca!4v1533221271547" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>      </div>
+    </div>
+  </div>
+  <div class="card">
+</div>
+</div>
+            <div class="col-xl-12" id="content">
+                <hr/>
+                <form name="myFormComment" role="form" method="POST" onsubmit="addComment()" novalidate>
+                    <div class="form-group row">
+                        <label for="staticName" class="col-sm-2 col-form-label">Name:</label>
+                        <div class="col-sm-6">
+                            <input type="text" name="name" readonly class="form-control-plaintext" id="staticName" value="Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Type a comment</label>
+                        <textarea class="form-control" name="comment" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="col-sm-2 btn btn-primary mb-2">Add</button>
+                    </div>
+                </form>
+                <hr/>
+            </div>
+        </div>
+        <div class="col-xl-2 starter-template ">
+            <div class="col-lg-12 shadow p-3 mb-5 bg-white rounded">
+                <img src="../images/ti2.jpg" tabindex="0" class="img-thumbnail mb-2 bg-white rounded">
+
+                <img src="../images/ti3.jpg" tabindex="0" class="img-thumbnail mb-2 bg-white rounded">
+
+                <img src="../images/ti4.jpg" tabindex="0" class="img-thumbnail mb-2 bg-white rounded">
+
+                <img src="../images/ti5.png" tabindex="0" class="img-thumbnail mb-2 bg-white rounded">
+
+                <img src="../images/ti6.jpg" tabindex="0" class="img-thumbnail mb-2 bg-white rounded">
+            </div>
+            <div class="col-lg-12 shadow p-3 mb-3 bg-white rounded">
+                <div class="card" style="width: 100%;">
+                    <div class="card-body">
+                        <h5 class="card-title">Overview</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>Address:</b> <p>25 Queens Quay W, Toronto, ON M5J 2G4</p></li>
+                        <li class="list-group-item"><b>Adualt:</b> <p>$7.50</p>
+						<b>Student and Senior:</b> <p>$5.00</p>
+						<b>Junior (under 14):</b> <p>$3.65</p>
+						<b>Infant (under 2)	:</b> <p>Free</p></li>
+                        <li class="list-group-item"><a href="http://www.torontoisland.com" class="card-link">Website</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+
+        </div>
+		</div>
+		</main>
+
+<footer class="bg-dark">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <p class="mt-3 text-left text-white">© Lambton College 2018 | Web technology project </p>
+            </div>
+            <div class="col-lg-6">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Bootstrap js-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</body>
+</html>
